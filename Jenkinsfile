@@ -14,8 +14,6 @@ pipeline {
         stage('project-build') {
             steps {
                 sh 'docker exec workspace composer install'
-                sh 'docker exec workspace npm install'
-                sh 'docker exec workspace npm run prod'
                 sh 'docker exec workspace chmod -R 777 storage/'
             }
         }
