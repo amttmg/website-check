@@ -21,7 +21,6 @@ pipeline {
             steps {
                 sh 'docker exec workspace php artisan key:generate'
                 sh 'docker exec workspace php artisan migrate'
-                sh 'docker exec workspace php artisan db:seed'
             }
         }
     }
